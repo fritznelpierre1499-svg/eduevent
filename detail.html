@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduEvent | Détail de l'Événement</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+        <img src="images/logo.png" alt="EduEvent Logo" style="width: 40px; height: 40px; object-fit: contain;">
+        <div>
+          <span class="logo-primary">Edu</span><span class="logo-secondary">Event</span>
+        </div>
+      </a>
+      
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Accueil</a></li>
+          <li><a href="evenements.html" class="nav-link active">Événements</a></li>
+          <li><a href="profil.html" class="nav-link">Profil</a></li>
+          <li><a href="a-propos.html" class="nav-link">À propos</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="profil.html" id="header-profile-btn" class="btn btn-primary">Mon Profil</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container page-main">
+    
+    <div style="margin-bottom: 25px;">
+      <a href="evenements.html" class="btn btn-outline btn-sm">← Retour à la liste des événements</a>
+    </div>
+
+    
+    <div id="event-detail-container" class="fade-in"></div>
+
+    <section class="social-share" style="margin-top: 30px; display: flex; align-items: center; justify-content: center; background-color: var(--card-bg); padding: 20px; border-radius: var(--border-radius-md); border: 1px solid var(--border-color); gap: 15px;">
+      <span style="font-weight: 600; color: var(--text-main);">Partager cet événement :</span>
+      <button id="btn-copy-link" class="share-btn">🔗 Copier le lien</button>
+      <a href="https://twitter.com" target="_blank" class="share-btn" aria-label="Partager sur X / Twitter">
+        <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width: 14px; height: 14px; margin-right: 5px; display: inline-block; vertical-align: middle;">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        </svg> Twitter / X
+      </a>
+      <a href="https://facebook.com" target="_blank" class="share-btn" aria-label="Partager sur Facebook">
+        <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width: 14px; height: 14px; margin-right: 5px; display: inline-block; vertical-align: middle;">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+        </svg> Facebook
+      </a>
+    </section>
+
+    <section class="registration-section" style="margin-top: 40px;">
+      <div class="newsletter-card" style="max-width: 800px; text-align: left; margin: 0 auto;">
+        <h2>S'inscrire à cet événement</h2>
+        <p>Remplissez ce formulaire pour réserver votre place. Vous retrouverez ce billet dans votre <strong>Espace Personnel</strong>.</p>
+
+        <form id="registration-form" style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+          <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+            <input type="text" id="reg-name" placeholder="Votre nom complet" required style="flex: 1; min-width: 250px; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--border-radius-sm);">
+            
+            <div style="flex: 1; min-width: 250px; display: flex; flex-direction: column; gap: 5px;">
+              <input type="email" id="reg-email" placeholder="prenom.nom@student.ueh.edu.ht" required style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--border-radius-sm);">
+              <small id="reg-email-error-msg" style="color: #dc3545; font-size: 0.75rem; display: none;">Veuillez utiliser votre adresse email universitaire valide (ex: prenom.nom@student.ueh.edu.ht).</small>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 15px; flex-wrap: wrap; align-items: center;">
+            <select id="reg-faculty" required style="flex: 1; min-width: 250px; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--border-radius-sm); background-color: #fff;">
+              <option value="">Sélectionnez votre faculté ou direction...</option>
+              <option value="Sciences et Génie">Faculté des Sciences et de Génie</option>
+              <option value="Médecine">Faculté de Médecine</option>
+              <option value="Droit & Gestion">Faculté de Droit et de Gestion</option>
+              <option value="Lettres & Arts">Faculté des Lettres et Arts</option>
+              <option value="Administration">Administration / Service Campus</option>
+            </select>
+            
+            <button type="submit" id="submit-reg-btn" class="btn btn-secondary">Confirmer mon inscription</button>
+          </div>
+        </form>
+        <div id="registration-message" class="form-message"></div>
+      </div>
+    </section>
+
+    <section class="comments-section" style="margin-top: 60px;">
+      <div class="section-title" style="text-align: left; margin-bottom: 30px;">
+        <h2>Questions & Avis sur l'événement</h2>
+      </div>
+      <div id="comments-container" style="display: flex; flex-direction: column; gap: 15px; margin-bottom: 30px;">
+        </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-info">
+        <a href="index.html" class="logo text-white" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+          <img src="images/logo.png" alt="EduEvent Logo" style="width: 40px; height: 40px; object-fit: contain;">
+          <div>
+            <span class="logo-primary">Edu</span><span class="logo-secondary">Event</span>
+          </div>
+        </a>
+        <p style="margin-top: 10px; font-size: 0.9rem; color: var(--text-muted);">
+          La plateforme officielle de gestion et de promotion des événements du campus.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="evenements.html">Tous les événements</a></li>
+          <li><a href="profil.html">Profil</a></li>
+          <li><a href="a-propos.html">À propos & FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>Email: contact@eduevent.univ.edu</p>
+        <p>Localisation: Limonade, Haïti</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom" style="text-align: center; margin-top: 30px; border-top: 1px solid var(--border-color); padding-top: 15px; font-size: 0.85rem; color: var(--text-muted);">
+      <p>&copy; 2026 EduEvent - PIERRE Fritznel. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/detail.js"></script> 
+</body>
+</html>
