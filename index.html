@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduEvent | Plateforme des événements de votre campus</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+        <img src="images/logo.png" alt="EduEvent Logo" style="width: 40px; height: 40px; object-fit: contain;">
+        <div>
+          <span class="logo-primary">Edu</span><span class="logo-secondary">Event</span>
+        </div>
+      </a>
+      
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Accueil</a></li>
+          <li><a href="evenements.html" class="nav-link">Événements</a></li>
+          <li><a href="profil.html" class="nav-link">Profil</a></li>
+          <li><a href="a-propos.html" class="nav-link">À propos</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+       
+        <a href="profil.html" id="header-profile-btn" class="btn btn-primary">Se Connecter</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container hero-container fade-in">
+        <div class="hero-content">
+          <h1 class="hero-title">Ne manquez plus aucun événement sur votre campus !</h1>
+          <p class="hero-subtitle">
+            Découvrez, filtrez et inscrivez-vous en un clic aux conférences, ateliers, compétitions sportives et activités culturelles de l'université.
+          </p>
+          <div class="hero-buttons">
+            <a href="evenements.html" class="btn btn-secondary">Explorer les événements</a>
+            <a href="profil.html?mode=register" class="btn btn-outline">Créer un compte</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-events container">
+      <div class="section-title">
+        <h2>Événements à la une</h2>
+        <p>Les rendez-vous incontournables de cette semaine</p>
+      </div>
+
+      <div class="events-grid">
+        
+        <article class="event-card">
+          <div class="card-image-wrap" style="background-color: #f1f5f9; min-height: 180px; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="images/events/conference.jpeg" 
+                 alt="L'Intelligence Artificielle et le Futur du Web" 
+                 class="card-img" 
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                 style="display: block; width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 2;">
+            
+            <div class="fallback-vector" style="display: none; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; padding: 20px; text-align: center; background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 48px; height: 48px; margin-bottom: 6px;"><path d="M17 10H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V12a2 2 0 0 1 2-2h3" /><rect x="7" y="2" width="10" height="15" rx="1" /><path d="M12 11h.01" /></svg>
+            </div>
+            <span class="card-badge" style="z-index: 3;">Conférence</span>
+          </div>
+          <div class="card-content">
+            <span class="card-date">28 Juillet 2026</span>
+            <h3 class="card-title">L'Intelligence Artificielle et le Futur du Web</h3>
+            <p class="card-location">Amphi A - Faculté des Sciences</p>
+            <a href="detail.html?id=1" class="btn btn-outline btn-sm">Voir le détail</a>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="card-image-wrap" style="background-color: #f1f5f9; min-height: 180px; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="images/events/sport.jpeg" 
+                 alt="Tournoi de Football" 
+                 class="card-img" 
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                 style="display: block; width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 2;">
+            
+            <div class="fallback-vector" style="display: none; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; padding: 20px; text-align: center; background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#15803d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 48px; height: 48px; margin-bottom: 6px;"><circle cx="12" cy="12" r="10" /><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" /><path d="M2 12h20" /></svg>
+            </div>
+            <span class="card-badge badge-sport" style="z-index: 3;">Sport</span>
+          </div>
+          <div class="card-content">
+            <span class="card-date">02 Août 2026</span>
+            <h3 class="card-title">Tournoi Inter-Facultés de Football</h3>
+            <p class="card-location">Terrain Synthétique Campus Est</p>
+            <a href="detail.html?id=2" class="btn btn-outline btn-sm">Voir le détail</a>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="card-image-wrap" style="background-color: #f1f5f9; min-height: 180px; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="images/events/atelier.jpeg" 
+                 alt="Workshop UI/UX" 
+                 class="card-img" 
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                 style="display: block; width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 2;">
+            
+            <div class="fallback-vector" style="display: none; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; padding: 20px; text-align: center; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 48px; height: 48px; margin-bottom: 6px;"><path d="M12 19l7-7 3 3-7 7-3-3z" /><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" /><path d="M2 2l7.586 7.586" /><circle cx="11" cy="11" r="2" /></svg>
+            </div>
+            <span class="card-badge badge-culture" style="z-index: 3;">Atelier</span>
+          </div>
+          <div class="card-content">
+            <span class="card-date">10 Août 2026</span>
+            <h3 class="card-title">Workshop : UI/UX Design & Prototypage</h3>
+            <p class="card-location">Labo Info 3 - Bâtiment B</p>
+            <a href="detail.html?id=3" class="btn btn-outline btn-sm">Voir le détail</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container stats-grid">
+        <div class="stat-item">
+          <span class="stat-number" data-target="150">150</span>
+          <span class="stat-label">Événements Organisés</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="3200">3200</span>
+          <span class="stat-label">Participants Inscrits</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="12">12</span>
+          <span class="stat-label">Facultés & Départements</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter container">
+      <div class="newsletter-card" style="text-align: center;">
+        <h2>Restez informé des prochains événements</h2>
+        <p>Abonnez-vous à la newsletter universitaire pour ne rien rater.</p>
+        <form id="newsletter-form" class="newsletter-form">
+          <input type="email" id="newsletter-email" placeholder="Entrez votre email universitaire" required>
+          <button type="submit" class="btn btn-primary">S'abonner</button>
+        </form>
+        <div id="newsletter-message" class="form-message" style="margin-top: 15px; text-align: center;"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-info">
+        
+        <a href="index.html" class="logo text-white" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+          <img src="images/logo.png" alt="EduEvent Logo" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; object-position: center; background-color: #fff;">
+          <div>
+            <span class="logo-primary">Edu</span><span class="logo-secondary">Event</span>
+          </div>
+        </a>
+        <p style="margin-top: 10px; font-size: 0.9rem; color: var(--text-muted);">La plateforme officielle de gestion et de promotion des événements du campus.</p>
+        <div class="footer-socials" style="margin-top: 20px; display: flex; gap: 15px;">
+          <a href="https://facebook.com" target="_blank" class="footer-social-link" aria-label="Facebook">
+            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width: 20px; height: 20px; color: #ffffff;"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://twitter.com" target="_blank" class="footer-social-link" aria-label="Twitter / X">
+            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width: 20px; height: 20px; color: #ffffff;"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="evenements.html">Tous les événements</a></li>
+          <li><a href="a-propos.html">À propos & FAQ</a></li>
+          <li><a href="profil.html">Mon Profil</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>Email: contact@eduevent.univ.edu</p>
+        <p>Localisation: Limonade, Haïti</p>
+      </div>
+    </div>
+    <div class="footer-bottom" style="text-align: center; margin-top: 30px; border-top: 1px solid var(--border-color); padding-top: 15px; font-size: 0.85rem; color: var(--text-muted);">
+      <p>&copy; 2026 EduEvent - PIERRE Fritznel. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
