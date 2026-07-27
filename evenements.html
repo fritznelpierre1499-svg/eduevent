@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduEvent | Catalogue des Événements</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+        <img src="images/logo.png" alt="EduEvent Logo" style="width: 40px; height: 40px; object-fit: contain;">
+        <div>
+          <span class="logo-primary">Edu</span><span class="logo-secondary">Event</span>
+        </div>
+      </a>
+      
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Accueil</a></li>
+          <li><a href="evenements.html" class="nav-link active">Événements</a></li>
+          <li><a href="profil.html" class="nav-link">Profil</a></li>
+          <li><a href="a-propos.html" class="nav-link">À propos</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        
+        <a href="profil.html" id="header-profile-btn" class="btn btn-primary">Mon Profil</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container page-main">
+    <div class="page-header">
+      <h1>Tous les Événements du Campus</h1>
+      <p>Recherchez et filtrez les activités à venir</p>
+    </div>
+
+    <section class="filters-section">
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="Rechercher par titre, lieu ou mot-clé...">
+      </div>
+
+      <div class="filter-controls">
+        <!-- Catégorie -->
+        <select id="category-filter">
+          <option value="all">Toutes les catégories</option>
+          <option value="Conference">Conférences</option>
+          <option value="Sport">Sport</option>
+          <option value="Atelier">Ateliers</option>
+          <option value="Culture">Culture</option>
+          <option value="Soutenance">Soutenances</option>
+        </select>
+
+        <!-- Filtre par date -->
+        <select id="date-filter">
+          <option value="all">Toutes les dates</option>
+          <option value="today">Aujourd'hui</option>
+          <option value="week">Cette semaine</option>
+          <option value="month">Ce mois-ci</option>
+        </select>
+
+        <!-- Toggle Vue -->
+        <div class="view-toggle">
+          <button id="view-grid" class="btn-toggle active" title="Vue Grille">Grille</button>
+          <button id="view-list" class="btn-toggle" title="Vue Liste">Liste</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conteneur des cartes d'événements -->
+    <section id="events-container" class="events-grid">
+    </section>
+
+    <!-- Chargement progressif (Pagination / Load More) -->
+    <div style="text-align: center; margin-top: 40px; margin-bottom: 20px;">
+      <button id="load-more-btn" class="btn btn-primary">Charger plus d'événements</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-info">
+        <a href="index.html" class="logo text-white" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+          <img src="images/logo.png" alt="EduEvent Logo" style="width: 40px; height: 40px; object-fit: contain;">
+          <div>
+            <span class="logo-primary">Edu</span><span class="logo-secondary">Event</span>
+          </div>
+        </a>
+        <p style="margin-top: 10px; font-size: 0.9rem; color: var(--text-muted);">
+          La plateforme officielle de gestion et de promotion des événements du campus.
+        </p>
+        
+        <div class="footer-socials" style="margin-top: 20px; display: flex; gap: 15px;">
+          <a href="https://facebook.com" target="_blank" class="footer-social-link" aria-label="Facebook">
+            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width: 20px; height: 20px; color: #ffffff;">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="https://twitter.com" target="_blank" class="footer-social-link" aria-label="Twitter / X">
+            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width: 20px; height: 20px; color: #ffffff;">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="evenements.html">Tous les événements</a></li>
+          <li><a href="profil.html">Profil</a></li>
+          <li><a href="a-propos.html">À propos & FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>Email: contact@eduevent.univ.edu</p>
+        <p>Localisation: Limonade, Haïti</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom" style="text-align: center; margin-top: 30px; border-top: 1px solid var(--border-color); padding-top: 15px; font-size: 0.85rem; color: var(--text-muted);">
+      <p>&copy; 2026 EduEvent - PIERRE Fritznel. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/evenements.js"></script>
+</body>
+</html>
