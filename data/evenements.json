@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "titre": "L'Intelligence Artificielle et le Futur du Web",
+    "categorie": "Conference",
+    "date": "2026-07-28",
+    "heure": "14:00",
+    "lieu": "Auditorium du CHCL",
+    "organisateur": "Département Informatique",
+    "placesRestantes": 15,
+    "placesTotales": 100,
+    "description": "Une conférence passionnante sur les avancées récentes de l'IA générative et son impact sur les technologies web modernes.",
+    "badgeClass": "",
+    "imageName": "conference.jpeg"
+  },
+  {
+    "id": 2,
+    "titre": "Tournoi Inter-Facultés de Football",
+    "categorie": "Sport",
+    "date": "2026-08-02",
+    "heure": "09:00",
+    "lieu": "Terrain - Parc Raphael",
+    "organisateur": "Bureau des Sports (BDS)",
+    "placesRestantes": 4,
+    "placesTotales": 32,
+    "description": "Venez supporter vos facultés lors du tournoi annuel de football de l'université.",
+    "badgeClass": "badge-sport",
+    "imageName": "sport.jpeg"
+  },
+  {
+    "id": 3,
+    "titre": "Workshop : UI/UX Design & Prototypage",
+    "categorie": "Atelier",
+    "date": "2026-08-10",
+    "heure": "10:00",
+    "lieu": "Auditorium du CHCL",
+    "organisateur": "Club Design & Dev",
+    "placesRestantes": 0,
+    "placesTotales": 25,
+    "description": "Apprenez les fondamentaux de l'ergonomie web et la création de wireframes interactifs sur Figma.",
+    "badgeClass": "badge-culture",
+    "imageName": "atelier.jpeg"
+  },
+  {
+    "id": 4,
+    "titre": "Concert Académique de Rentrée",
+    "categorie": "Culture",
+    "date": "2026-08-15",
+    "heure": "18:30",
+    "lieu": "Agora du CHCL",
+    "organisateur": "Club Culturel",
+    "placesRestantes": 45,
+    "placesTotales": 200,
+    "description": "Soirée musicale orchestrée par les talents étudiants et les chorales de notre université.",
+    "badgeClass": "badge-culture",
+    "imageName": "culture.jpeg"
+  },
+  {
+    "id": 5,
+    "titre": "Soutenance Publique : Projet de Fin d'Études en IA",
+    "categorie": "Soutenance",
+    "date": "2026-08-20",
+    "heure": "13:30",
+    "lieu": "Laboration Informatique - Batiment C",
+    "organisateur": "Jury de Soutenance - L3 Informatique",
+    "placesRestantes": 20,
+    "placesTotales": 50,
+    "description": "Présentation et soutenance d'un projet innovant de système expert appliqué à la gestion universitaire.",
+    "badgeClass": "badge-soutenance",
+    "imageName": "soutenance.jpeg"
+  }
+]
