@@ -1,0 +1,134 @@
+
+@media (max-width: 992px) {
+  .container {
+    width: 92%;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    text-align: center;
+  }
+
+  .footer-info .logo {
+    justify-content: center !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-socials {
+    justify-content: center !important;
+  }
+
+  .events-list .event-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .events-list .event-card .card-badge {
+    align-self: flex-start;
+    margin-bottom: 10px;
+  }
+
+  .events-list .event-card .card-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .events-list .event-card .card-title {
+    min-width: unset;
+  }
+
+  .events-list .event-card .btn-sm {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-buttons .btn,
+  .newsletter-form .btn,
+  .filters-section .btn {
+    width: 100%;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  .header-container {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 0;
+    gap: 12px;
+  }
+
+  .nav-links {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 60px 15px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-card {
+    padding: 30px 15px;
+  }
+
+  .profile-layout,
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filters-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-controls {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .filter-controls select,
+  .search-box input {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-contact p {
+    text-align: center;
+  }
+}
