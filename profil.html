@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduEvent | Espace Universitaire & Profil</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+        <img src="images/logo.png" alt="EduEvent Logo" style="width: 40px; height: 40px; object-fit: contain;">
+        <div>
+          <span class="logo-primary">Edu</span><span class="logo-secondary">Event</span>
+        </div>
+      </a>
+      
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Accueil</a></li>
+          <li><a href="evenements.html" class="nav-link">Événements</a></li>
+          <li><a href="profil.html" class="nav-link active">Profil</a></li>
+          <li><a href="a-propos.html" class="nav-link">À propos</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="profil.html" class="btn btn-primary active">Mon Profil</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container page-main">
+    
+    <div class="page-header">
+      <h1>Espace Universitaire & Mes Inscriptions</h1>
+      <p>Gérez votre carte d'identité numérique du campus et consultez vos billets d'événements.</p>
+    </div>
+
+    <div class="profile-layout">
+      
+      <aside class="profile-card fade-in">
+        
+        <div id="profile-view-mode">
+          <div class="profile-avatar" style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px auto; background-color: #e2e8f0;">
+           <img id="profile-avatar-img" src="images/logo.png" alt="Photo de l'étudiant" style="width: 100%; height: 100%; object-fit: cover; object-position: center;" onerror="this.src='images/a-propos.png'">
+          </div>
+          <h2 id="profile-name">Chargement...</h2>
+          
+          <p id="profile-role-badge" class="profile-role" style="background-color: var(--primary-color); color: white; padding: 4px 12px; border-radius: 20px; display: inline-block; font-size: 0.8rem; margin-top: 8px; font-weight: bold;">Étudiant</p>
+
+          <ul class="profile-info-list" style="margin-top: 20px; list-style: none; padding: 0;">
+            <li style="margin-bottom: 10px;"><strong>Faculté / Direction :</strong> <span id="profile-faculty">--</span></li>
+            <li style="margin-bottom: 10px;"><strong>Statut / Titre :</strong> <span id="profile-status">--</span></li>
+            <li style="margin-bottom: 10px;"><strong>Email Officiel :</strong> <span id="profile-email">--</span></li>
+          </ul>
+
+          <button id="edit-profile-btn" class="btn btn-outline btn-sm" style="width: 100%; margin-top: 20px;">Modifier mon profil</button>
+        </div>
+
+        
+        <form id="profile-edit-form" style="display: none; flex-direction: column; gap: 12px; margin-top: 5px;">
+          <h3 style="font-size: 1.1rem; margin-bottom: 5px;">Modifier le profil</h3>
+          
+          <div style="display: flex; flex-direction: column; gap: 5px;">
+            <label style="font-size: 0.85rem; font-weight: 600;">Photo de profil :</label>
+            <input type="file" id="input-avatar-file" accept="image/*" style="font-size: 0.85rem;">
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 5px;">
+            <label style="font-size: 0.85rem; font-weight: 600;">Nom complet :</label>
+            <input type="text" id="input-name" required style="padding: 8px; border: 1px solid var(--border-color); border-radius: 4px;">
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 5px;">
+            <label style="font-size: 0.85rem; font-weight: 600;">Faculté / Direction :</label>
+            <input type="text" id="input-faculty" required style="padding: 8px; border: 1px solid var(--border-color); border-radius: 4px;">
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 5px;">
+            <label style="font-size: 0.85rem; font-weight: 600;">Statut / Titre :</label>
+            <input type="text" id="input-status" required style="padding: 8px; border: 1px solid var(--border-color); border-radius: 4px;">
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 5px;">
+            <label style="font-size: 0.85rem; font-weight: 600;">Email officiel universitaire :</label>
+            <input type="email" id="input-email" placeholder="prenom.nom@student.ueh.edu.ht" required style="padding: 8px; border: 1px solid var(--border-color); border-radius: 4px;">
+            <small id="email-error-msg" style="color: #dc3545; font-size: 0.75rem; display: none;">Veuillez utiliser votre adresse email universitaire valide (ex: prenom.nom@student.ueh.edu.ht).</small>
+          </div>
+
+          <div style="display: flex; gap: 10px; margin-top: 10px;">
+            <button type="submit" class="btn btn-primary btn-sm" style="flex: 1;">Enregistrer</button>
+            <button type="button" id="cancel-edit-btn" class="btn btn-outline btn-sm" style="flex: 1;">Annuler</button>
+          </div>
+        </form>
+
+      </aside>
+
+      <!-- SECTION RESERVATIONS -->
+      <section class="my-events-section fade-in">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+          <h2>Mes Réservations (<span id="ticket-count">0</span>)</h2>
+          <a href="evenements.html" class="btn btn-secondary btn-sm">+ Réserver un autre événement</a>
+        </div>
+
+        <div id="my-tickets-container" class="tickets-grid">
+          
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-info">
+        <a href="index.html" class="logo text-white" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+          <img src="images/logo.png" alt="EduEvent Logo" style="width: 40px; height: 40px; object-fit: contain;">
+          <div>
+            <span class="logo-primary">Edu</span><span class="logo-secondary">Event</span>
+          </div>
+        </a>
+        <p style="margin-top: 10px; font-size: 0.9rem; color: var(--text-muted);">
+          La plateforme officielle de gestion et de promotion des événements du campus.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="evenements.html">Tous les événements</a></li>
+          <li><a href="a-propos.html">À propos & FAQ</a></li>
+          <li><a href="profil.html">Mon Profil</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>Email: contact@eduevent.univ.edu</p>
+        <p>Localisation: Limonade, Haïti</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom" style="text-align: center; margin-top: 30px; border-top: 1px solid var(--border-color); padding-top: 15px; font-size: 0.85rem; color: var(--text-muted);">
+      <p>&copy; 2026 EduEvent - PIERRE Fritznel. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/profil.js"></script>
+</body>
+</html>
