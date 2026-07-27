@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduEvent | À propos & FAQ</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+        <img src="images/logo.png" alt="EduEvent Logo" style="width: 40px; height: 40px; object-fit: contain;">
+        <div>
+          <span class="logo-primary">Edu</span><span class="logo-secondary">Event</span>
+        </div>
+      </a>
+      
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Accueil</a></li>
+          <li><a href="evenements.html" class="nav-link">Événements</a></li>
+          <li><a href="profil.html" class="nav-link">Profil</a></li>
+          <li><a href="a-propos.html" class="nav-link active">À propos</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="profil.html" id="header-profile-btn" class="btn btn-primary">Mon Profil</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container page-main">
+    
+    <section class="page-header text-center fade-in">
+      <h1>À propos d'EduEvent</h1>
+      <p>Découvrez notre mission, l'équipe derrière le projet et la Foire Aux Questions du campus.</p>
+    </section>
+
+    <section class="about-grid fade-in" style="margin-top: 40px;">
+      <div class="about-text">
+        <h2>La plateforme officielle des événements du campus</h2>
+        <p><strong>EduEvent</strong> a été conçue pour centraliser toute la vie associative, scientifique et culturelle de notre université. Notre objectif est de faciliter l'accès aux conférences, ateliers, tournois sportifs et expositions organisés au sein de nos facultés.</p>
+        <p style="margin-top: 15px;">Grâce à une interface moderne et réactive, chaque étudiant peut consulter le catalogue en temps réel, réserver sa place et gérer ses accès directement depuis son profil numérique.</p>
+      </div>
+      <div class="about-stats-card">
+        <h3>En quelques chiffres</h3>
+        <ul style="margin-top: 15px; display: flex; flex-direction: column; gap: 15px;">
+          <li>🏛️ <strong>4 Facultés partenaires</strong></li>
+          <li>📅 <strong>+120 Événements</strong> organisés par an</li>
+          <li>🎓 <strong>+5 000 Étudiants</strong> participants inscrits</li>
+        </ul>
+      </div>
+    </section>
+
+    <section style="margin-top: 70px;" class="fade-in">
+      <div class="section-title text-center">
+        <h2>L'Équipe de Développement</h2>
+        <p>L'étudiant de L3 Informatique derrière la conception du projet.</p>
+      </div>
+
+      <div class="team-grid" style="display: flex; justify-content: center; margin-top: 30px;">
+        <div class="team-card text-center" style="max-width: 360px; width: 100%; display: flex; flex-direction: column; align-items: center;">
+          <div style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden; margin-bottom: 15px;">
+            <img src="images/a-propos.png" alt="PIERRE Fritznel" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+          </div>
+          <h3 style="width: 100%; text-align: center;">PIERRE Fritznel</h3>
+          <p class="profile-role" style="width: 100%; text-align: center;">Développeur Full-Stack & UI/UX Designer</p>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px; width: 100%; text-align: center;">Conception globale de la plateforme, interfaces HTML/CSS, scripts dynamiques et gestion des données.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top: 70px;" class="fade-in">
+      <div class="section-title text-center">
+        <h2>Foire Aux Questions (FAQ)</h2>
+        <p>Cliquez sur une question pour afficher la réponse.</p>
+      </div>
+
+      <div class="accordion" style="max-width: 800px; margin: 30px auto 0;">
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Comment réserver une place pour un événement ?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Rendez-vous sur la page "Événements", choisissez une activité puis cliquez sur "Voir le détail". Remplissez ensuite le formulaire de réservation situé en bas de page.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Où retrouver mes billets réservés ?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Toutes vos réservations sont enregistrées dans votre navigateur. Vous pouvez les consulter et les gérer à tout moment en vous rendant sur la page "Mon Profil".</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Puis-je annuler une réservation en cas d'empêchement ?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Oui ! Rendez-vous sur votre page "Mon Profil", recherchez l'événement concerné et cliquez sur le bouton "Annuler mon billet". La place sera réattribuée automatiquement.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Les événements sont-ils gratuits pour les étudiants ?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Absolument, la totalité des conférences, ateliers, soutenances et activités répertoriés sur EduEvent sont 100% gratuits pour la communauté universitaire.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top: 70px; margin-bottom: 50px;" class="fade-in">
+      <div class="section-title text-center">
+        <h2>Nous Contacter & Localisation</h2>
+        <p>Une question ou un partenariat ? Écrivez-nous ou rendez-nous visite sur le campus.</p>
+      </div>
+
+      <div class="contact-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 30px;">
+        <div style="background-color: var(--card-bg); padding: 30px; border-radius: var(--border-radius-lg); border: 1px solid var(--border-color);">
+          <h3>Envoyer un message</h3>
+          <form id="contact-form" style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+            <input type="text" id="contact-name" placeholder="Votre nom complet" required style="padding: 12px; border: 1px solid var(--border-color); border-radius: var(--border-radius-sm);">
+            <input type="email" id="contact-email" placeholder="Votre email" required style="padding: 12px; border: 1px solid var(--border-color); border-radius: var(--border-radius-sm);">
+            <textarea id="contact-message" rows="4" placeholder="Votre message..." required style="padding: 12px; border: 1px solid var(--border-color); border-radius: var(--border-radius-sm); font-family: inherit;"></textarea>
+            <button type="submit" class="btn btn-primary">Envoyer le message</button>
+          </form>
+          <div id="contact-response" class="form-message"></div>
+        </div>
+
+        <div style="background-color: var(--card-bg); padding: 20px; border-radius: var(--border-radius-lg); border: 1px solid var(--border-color); display: flex; flex-direction: column;">
+          <h3>Notre Emplacement</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">Université d'État d'Haïti — Campus Henri Christophe de Limonade, Haïti.</p>
+          <div style="flex: 1; min-height: 250px; border-radius: var(--border-radius-md); overflow: hidden;">
+            <iframe 
+              src="https://maps.google.com/maps?q=Campus%20Henri%20Christophe%20de%20Limonade%20Haiti&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              width="100%" 
+              height="100%" 
+              style="border:0; min-height: 250px;" 
+              allowfullscreen="" 
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-info">
+        <a href="index.html" class="logo text-white" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+          <img src="images/logo.png" alt="EduEvent Logo" style="width: 40px; height: 40px; object-fit: contain;">
+          <div>
+            <span class="logo-primary">Edu</span><span class="logo-secondary">Event</span>
+          </div>
+        </a>
+        <p style="margin-top: 10px; font-size: 0.9rem; color: var(--text-muted);">
+          La plateforme officielle de gestion et de promotion des événements du campus.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="evenements.html">Tous les événements</a></li>
+          <li><a href="profil.html">Profil</a></li>
+          <li><a href="a-propos.html">À propos & FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>Email: contact@eduevent.univ.edu</p>
+        <p>Localisation: Limonade, Haïti</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom" style="text-align: center; margin-top: 30px; border-top: 1px solid var(--border-color); padding-top: 15px; font-size: 0.85rem; color: var(--text-muted);">
+      <p>&copy; 2026 EduEvent - PIERRE Fritznel. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
